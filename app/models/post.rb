@@ -9,9 +9,10 @@ class Post < ActiveRecord::Base
   validates_presence_of :name, :content
 
   def tags_attributes=(tags_hashes)
-    tags_hashes.each do |tag_attributes|
+    tags_hashes.each do |i, tag_attributes|
       tag = Tag.create_or_find_by(:name => tag_attributes[:name])
       self.post_tags.build(:tag => tag)
     end
   end
+  
 end
