@@ -7,4 +7,10 @@ class Post < ActiveRecord::Base
   # accepts_nested_attributes_for :tags, reject_if: proc { |attributes| attributes['name'].blank? }
 
   validates_presence_of :name, :content
+
+  def tags_attributes=(tags_hashes)
+    tags_hashes.each do |tag_attributes|
+      
+    end
+  end
 end
