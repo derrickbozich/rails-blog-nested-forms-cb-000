@@ -11,6 +11,7 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find_by_id(params[:id])
+    binding.pry
   end
 
   # GET /posts/new
