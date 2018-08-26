@@ -25,8 +25,8 @@
 
   <div class="field">
     <%= f.fields_for :tags, Tag.new do |tag_builder|  %><br>
-    <%= tag_builder.label :name %><br>
-    <%= tag_builder.text_field :name %><br>
+      <%= tag_builder.label :name %><br>
+      <%= tag_builder.text_field :name %><br>
     <% end %>
   </div>
 
