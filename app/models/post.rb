@@ -10,15 +10,10 @@ class Post < ActiveRecord::Base
 
   # def tags_attributes=(tags_hashes)
   #   tags_hashes.each do |tag_attributes|
-  #     # if tag_attributes[:name].present?
+  #
   #       tag = Tag.create_or_find_by(:name => tag_attributes[:name])
-  #       # if !self.tags.include?(tag)
+  #
   #         self.post_tags.build(:tag => tag)
-  #       # end
-  #
-  #     # end
-  #
-  #
   #   end
   # end
 end
