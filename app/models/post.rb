@@ -10,7 +10,7 @@ class Post < ActiveRecord::Base
 
   def tags_attributes=(tags_hashes)
     tags_hashes.each do |i, tag_attributes|
-      tag = Tag.create_or_find_by(name: tag_attributes[:name])
+      tag = Tag.all.create_or_find_by(name: tag_attributes[:name])
       self.post_tags.build(:tag => tag)
     end
   end
