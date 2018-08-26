@@ -15,7 +15,7 @@ class Post < ActiveRecord::Base
         tag = Tag.find_or_create_by(name: tag_attributes[:name])
         
           self.post_tags.build(:tag => tag)
-        
+
 
 
     end
