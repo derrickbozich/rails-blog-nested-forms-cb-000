@@ -13,9 +13,9 @@ class Post < ActiveRecord::Base
 
 
         tag = Tag.find_or_create_by(name: tag_attributes[:name])
-        if !self.tags.include?(tag)
+        
           self.post_tags.build(:tag => tag)
-        end
+        
 
 
     end
